@@ -41,7 +41,7 @@ namespace NICE.Dashboard
 				endpoints.MapHealthChecksUI(setupOptions: setup =>
 				{
 					setup.UIPath = "/";
-					setup.AddCustomStylesheet("NICE.Style.css");
+					setup.AddCustomStylesheet("wwwroot/NICE.Style.css");
 				});
 			});
 		}
