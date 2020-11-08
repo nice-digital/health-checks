@@ -33,6 +33,7 @@ namespace NICE.Dashboard
 				app.UseDeveloperExceptionPage();
 			}
 
+			app.UseStaticFiles();
 			app.UseRouting();
 
 			app.UseEndpoints(endpoints =>
@@ -40,6 +41,7 @@ namespace NICE.Dashboard
 				endpoints.MapHealthChecksUI(setupOptions: setup =>
 				{
 					setup.UIPath = "/";
+					setup.AddCustomStylesheet("NICE.Style.css");
 				});
 			});
 		}
